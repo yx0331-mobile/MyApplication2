@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 顶部三个图标 -->
+    <ImageView
+        android:id="@+id/iconStations"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="space station"
+        android:scaleType="fitCenter"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iconFlights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconFlights"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="rocket"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iconRovers"
+        app:layout_constraintStart_toEndOf="@+id/iconStations"
+        app:layout_constraintTop_toTopOf="@+id/iconStations" />
+
+    <ImageView
+        android:id="@+id/iconRovers"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="rover"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconFlights"
+        app:layout_constraintTop_toTopOf="@+id/iconStations" />
+
+    <TextView
+        android:id="@+id/tabStations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Space Stations"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iconStations"
+        app:layout_constraintStart_toStartOf="@+id/iconStations"
+        app:layout_constraintTop_toBottomOf="@+id/iconStations" />
+
+    <TextView
+        android:id="@+id/tabFlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flights"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iconFlights"
+        app:layout_constraintStart_toStartOf="@+id/iconFlights"
+        app:layout_constraintTop_toTopOf="@+id/tabStations" />
+
+    <TextView
+        android:id="@+id/tabRovers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rovers"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iconRovers"
+        app:layout_constraintStart_toStartOf="@+id/iconRovers"
+        app:layout_constraintTop_toTopOf="@+id/tabStations" />
+
+    <!-- DCA 绿色大按钮 -->
+    <Button
+        android:id="@+id/btnDca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#2E7D32"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/arrows"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabStations" />
+
+    <!-- 中间白色圆角块 + 双向箭头 -->
+    <ImageView
+        android:id="@+id/arrows"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/white_rounded"
+        android:contentDescription="arrows"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDca"
+        app:layout_constraintEnd_toStartOf="@+id/btnMars"
+        app:layout_constraintStart_toEndOf="@+id/btnDca"
+        app:layout_constraintTop_toTopOf="@+id/btnDca" />
+
+    <!-- MARS 绿色大按钮 -->
+    <Button
+        android:id="@+id/btnMars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#2E7D32"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arrows"
+        app:layout_constraintTop_toTopOf="@+id/btnDca" />
+
+    <!-- One Way 橙色按钮 + 右侧开关 -->
+    <Button
+        android:id="@+id/btnOneWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E8862E"
+        android:text="One Way"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDca" />
+
+    <Switch
+        android:id="@+id/switchOneWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOneWay"
+        app:layout_constraintStart_toEndOf="@+id/btnOneWay"
+        app:layout_constraintTop_toTopOf="@+id/btnOneWay" />
+
+    <!-- 1 Traveller 橙色按钮 -->
+    <Button
+        android:id="@+id/btnTraveller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E8862E"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOneWay" />
+
+    <!-- 小火箭 + 星球图：垂直方向在剩余空间里居中 -->
+    <ImageView
+        android:id="@+id/rocketSmall"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="rocket small"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/galaxy"
+        app:layout_constraintEnd_toStartOf="@+id/galaxy"
+        app:layout_constraintTop_toTopOf="@+id/galaxy" />
+
+    <ImageView
+        android:id="@+id/galaxy"
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:contentDescription="galaxy"
+        android:scaleType="fitCenter"
+        android:src="@drawable/galaxy"
+        app:layout_constraintBottom_toTopOf="@+id/btnDepart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTraveller" />
+
+    <!-- 底部绿色按钮 -->
+    <Button
+        android:id="@+id/btnDepart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2E7D32"
+        android:text="DEPART"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

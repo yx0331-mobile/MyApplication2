@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:stretchColumns="1">
+
+    <!-- 灰色标题条 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#909090"
+        android:padding="6dip"
+        android:text="Hello TableLayout"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TableRow>
+        <TextView
+            android:padding="3dip"
+            android:text="Open..."
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:paddingEnd="8dip"
+            android:text="Ctrl-O"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="3dip"
+            android:text="Save..."
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:paddingEnd="8dip"
+            android:text="Ctrl-S"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="3dip"
+            android:text="Save As..."
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:paddingEnd="8dip"
+            android:text="Ctrl-Shift-S"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#909090" />
+
+    <!-- CheckBox + 名称 打包成列0，列1 留空占位 -->
+    <TableRow>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <TextView
+                android:padding="3dip"
+                android:text="Import..."
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+    <TableRow>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <TextView
+                android:padding="3dip"
+                android:text="Export..."
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:paddingEnd="8dip"
+            android:text="Ctrl-E"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#909090" />
+
+    <TableRow>
+        <TextView
+            android:padding="3dip"
+            android:text="Quit"
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+</TableLayout>
